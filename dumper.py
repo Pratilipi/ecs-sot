@@ -10,7 +10,7 @@ NO_OF_READ_THREADS = config.NO_OF_READ_THREADS
 NO_OF_PROCESS_THREADS = config.NO_OF_PROCESS_THREADS
 
 # sqs config
-SQS_CLIENT = boto3.resource('sqs')
+SQS_CLIENT = boto3.resource('sqs', region_name=config.AWS_REGION)
 SQS_QUEUE = SQS_CLIENT.get_queue_by_name(QueueName=config.SQS_NAME)
 INTERNAL_QUEUE = Queue.Queue()
 
