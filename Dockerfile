@@ -28,5 +28,4 @@ RUN pip install -q -r requirements.txt
 #container port expose
 EXPOSE 80
 
-CMD ["python", "/ecs-sot/dumper.py"]
 
