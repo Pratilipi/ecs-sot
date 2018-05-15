@@ -24,7 +24,7 @@ class SourceData(threading.Thread):
         while True:
             try:
                 msgs = SQS_QUEUE.receive_messages(MaxNumberOfMessages=10, WaitTimeSeconds=5)
-                if msgs == None:
+                if len(msgs) == 0:
                     print "sqs empty"
                 for msg in msgs:
                     self.local_queue.put(msg)
