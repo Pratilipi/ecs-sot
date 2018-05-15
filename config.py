@@ -1,8 +1,8 @@
 import os
 
 # no. of parallel threads
-NO_OF_READ_THREADS = 100
-NO_OF_PROCESS_THREADS = 100
+NO_OF_READ_THREADS = 50
+NO_OF_PROCESS_THREADS = 50
 
 # sqs 
 AWS_REGION = 'ap-south-1'
